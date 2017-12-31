@@ -343,7 +343,7 @@ class Level implements ChunkManager, Metadatable{
 		/** @var LevelProvider $provider */
 
 		if(is_subclass_of($provider, LevelProvider::class, true)){
-			$this->provider = new $provider($this, $path);
+			$this->provider = new $provider($path);
 		}else{
 			throw new LevelException("Provider is not a subclass of LevelProvider");
 		}
